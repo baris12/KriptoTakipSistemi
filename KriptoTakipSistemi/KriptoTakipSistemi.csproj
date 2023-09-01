@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4E8AE2C-1E68-4C8A-8DA6-CDF5F90BC09D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KriptoTakipSistemi</RootNamespace>
+    <AssemblyName>KriptoTakipSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Binance.Spot.4.0.0\lib\netstandard2.0\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=7.0.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.7.0.4\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Spot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Binance.Spot.4.0.0\lib\netstandard2.0\Spot.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.7.0.0\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="tinet">
+      <HintPath>dll\tinet.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAlarmForm.Designer.cs">
+      <DependentUpon>AddAlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\ChangeEmailPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\ChangeEmailPanel.Designer.cs">
+      <DependentUpon>ChangeEmailPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\ChangePasswordPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\ChangePasswordPanel.Designer.cs">
+      <DependentUpon>ChangePasswordPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\EditUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\EditUserInfo.Designer.cs">
+      <DependentUpon>EditUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\TradingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\TradingPanel.Designer.cs">
+      <DependentUpon>TradingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\UserAccountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\UserAccountControl.Designer.cs">
+      <DependentUpon>UserAccountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exchangeConnectors\TradingClass.cs" />
+    <Compile Include="FormAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNewUser.Designer.cs">
+      <DependentUpon>FormAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_pages\TradingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_pages\TradingPage.Designer.cs">
+      <DependentUpon>TradingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="singleton\ThemeController.cs" />
+    <Compile Include="StrategyClasses\PriceIndicator.cs" />
+    <Compile Include="StrategyClasses\SignalChecker.cs" />
+    <Compile Include="StrategyClasses\SignalDataSource.cs" />
+    <Compile Include="StrategyClasses\SignalIndicatorSource.cs" />
+    <Compile Include="StrategyClasses\TradeSignal.cs" />
+    <Compile Include="components\AccountPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\AccountPanel.Designer.cs">
+      <DependentUpon>AccountPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\AlarmTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\AlarmTable.Designer.cs">
+      <DependentUpon>AlarmTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\AnalysisResultChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\AnalysisResultChart.Designer.cs">
+      <DependentUpon>AnalysisResultChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\EditPriceAlarmPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\EditPriceAlarmPanel.Designer.cs">
+      <DependentUpon>EditPriceAlarmPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\FavoriteList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\FavoriteList.Designer.cs">
+      <DependentUpon>FavoriteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\FormHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\FormHeader.Designer.cs">
+      <DependentUpon>FormHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\Loading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\PriceChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\PriceChart.Designer.cs">
+      <DependentUpon>PriceChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\PriceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\PriceList.Designer.cs">
+      <DependentUpon>PriceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_pages\AlarmsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_pages\AlarmsPage.Designer.cs">
+      <DependentUpon>AlarmsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_pages\AnalysisPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_pages\AnalysisPage.Designer.cs">
+      <DependentUpon>AnalysisPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_pages\SystemSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_pages\SystemSettings.Designer.cs">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_pages\UserSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_pages\UserSettings.Designer.cs">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogoutConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogoutConfirm.Designer.cs">
+      <DependentUpon>LogoutConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="singleton\DataService.cs" />
+    <Compile Include="singleton\TechnicalIndicators.cs" />
+    <Compile Include="singleton\User.cs" />
+    <Compile Include="singleton\DatabaseConnection.cs" />
+    <Compile Include="exchangeConnectors\BinanceWebSocketClient.cs" />
+    <Compile Include="exchangeConnectors\WebSocketClient.cs" />
+    <Compile Include="gui_pages\DashboardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_pages\DashboardPage.Designer.cs">
+      <DependentUpon>DashboardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exchangeConnectors\BinanceClient.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="exchangeConnectors\ExchangeClient.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="components\Sidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\Sidebar.Designer.cs">
+      <DependentUpon>Sidebar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddAlarmForm.resx">
+      <DependentUpon>AddAlarmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\AccountPanel.resx">
+      <DependentUpon>AccountPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\AlarmTable.resx">
+      <DependentUpon>AlarmTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\AnalysisResultChart.resx">
+      <DependentUpon>AnalysisResultChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\ChangeEmailPanel.resx">
+      <DependentUpon>ChangeEmailPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\ChangePasswordPanel.resx">
+      <DependentUpon>ChangePasswordPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\EditPriceAlarmPanel.resx">
+      <DependentUpon>EditPriceAlarmPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\EditUserInfo.resx">
+      <DependentUpon>EditUserInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\FavoriteList.resx">
+      <DependentUpon>FavoriteList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\FormHeader.resx">
+      <DependentUpon>FormHeader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\PriceChart.resx">
+      <DependentUpon>PriceChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\PriceList.resx">
+      <DependentUpon>PriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\TradingPanel.resx">
+      <DependentUpon>TradingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\UserAccountControl.resx">
+      <DependentUpon>UserAccountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddNewUser.resx">
+      <DependentUpon>FormAddNewUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_pages\AlarmsPage.resx">
+      <DependentUpon>AlarmsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_pages\AnalysisPage.resx">
+      <DependentUpon>AnalysisPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_pages\DashboardPage.resx">
+      <DependentUpon>DashboardPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_pages\SystemSettings.resx">
+      <DependentUpon>SystemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_pages\TradingPage.resx">
+      <DependentUpon>TradingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_pages\UserSettings.resx">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogoutConfirm.resx">
+      <DependentUpon>LogoutConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="components\Sidebar.resx">
+      <DependentUpon>Sidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="configs\AppConfig.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\loading_icon.gif" />
+    <None Include="assets\loading_icon_2.gif" />
+    <None Include="assets\loading_icon_3.gif" />
+    <Content Include="assets\logo.png" />
+    <Content Include="assets\logo.jpg" />
+    <None Include="assets\minus_icon.png" />
+    <None Include="assets\plus_icon.png" />
+    <Content Include="assets\wishlist_active.png" />
+    <Content Include="assets\wishlist_passive.png" />
+    <None Include="Resources\wishlist_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+  </Target>
+</Project>

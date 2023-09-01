@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  database_s: 
+    container_name: test_db 
+    #build: honeypot1/ 
+    image: postgres
+    networks:
+      postgres_network: # 
+        ipv4_address: 172.28.5.1
+    ports:
+      - "5432:5432" 
+    volumes:
+      - main_volume:/var/lib/postgresql/data:rw
+      - shared_volume:/temp:rw
+    environment:
+      - POSTGRES_PASSWORD=test123
+    tty: true
+    stdin_open: true
+
+networks:
+  postgres_network: 
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
+
+volumes:
+  main_volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Users/baris/docker/volumes/test_db/main_volume
+  shared_volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Users/baris/docker/volumes/test_db/shared_volume

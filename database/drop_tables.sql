@@ -1,0 +1,17 @@
+DROP TABLE trade_signals;
+DROP TABLE price_indicator_parameters;
+DROP TABLE price_indicators;
+DROP TABLE trade_signal_sources;
+DROP TABLE trade_signal_type;
+DROP TABLE price_indicator_parameter_types;
+DROP TABLE trade_signal_source_types;
+DROP TABLE role_screen_relation CASCADE;
+DROP TABLE screens CASCADE;
+DROP TABLE api_keys CASCADE;
+DROP TABLE price_alarms CASCADE;
+DROP TABLE alarm_condition CASCADE;
+DROP TABLE alarm_validity_period CASCADE;
+DROP TABLE favorite_symbols CASCADE;
+DROP TABLE users CASCADE;
+DROP TABLE role CASCADE;
+DROP TABLE exchanges CASCADE;
